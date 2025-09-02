@@ -7,12 +7,12 @@ export default function About() {
             <h1 className="text-6xl font-extrabold">Vision</h1>
         </div>
         <div className="text-green-900 bg-green-50 font-medium rounded-lg p-8 flex justify-center items-center">
-            <p>Halal Impact Schools is a center of excellence committed to raising a generation of confident, disciplined, and well-rounded learners. With a strong foundation rooted in moral values, academic excellence, and creativity, we nurture every child to discover their unique potential and thrive in today's dynamic world</p>
+            <p>Halal Impact Schools is a center of excellence committed to raising a generation of confident, disciplined, and well-rounded learners. With a strong foundation rooted in moral values, academic excellence, and creativity, we nurture every child to discover their unique potential and thrive in todays dynamic world</p>
         </div>
     </section>
     <section className="flex gap-4 p-4 h-fit">
         <div className="text-blue-900 bg-blue-50 font-medium rounded-lg p-8 flex justify-center items-center">
-            <p>Halal Impact Schools is a center of excellence committed to raising a generation of confident, disciplined, and well-rounded learners. With a strong foundation rooted in moral values, academic excellence, and creativity, we nurture every child to discover their unique potential and thrive in today's dynamic world</p>
+            <p>Halal Impact Schools is a center of excellence committed to raising a generation of confident, disciplined, and well-rounded learners. With a strong foundation rooted in moral values, academic excellence, and creativity, we nurture every child to discover their unique potential and thrive in todays dynamic world</p>
         </div>
         <div className="bg-blue-50 text-blue-900 h-full w-90 rounded-lg p-8">
             <p className="text-md font-semibold">Our</p>
