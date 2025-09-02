@@ -1,0 +1,50 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
+export default function SvgAnimation() {
+  // ✅ fix here
+  const pathRef = useRef<SVGPathElement | null>(null);
+
+  useEffect(() => {
+    if (!pathRef.current) return;
+
+    const path = pathRef.current;
+    const length = path.getTotalLength();
+
+    // Initial hidden state
+    gsap.set(path, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+    });
+
+    // Animate drawing
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: "power2.inOut",
+    });
+  }, []);
+
+  return (
+    <div className="absolute top-110 left-30">
+      <svg
+        width="100"
+        height="100"
+        viewBox="0 0 87.61 66.64"
+        xmlns="http://www.w3.org/2000/svg"
+        // viewBox="0 0 87.61 66.64"
+      >
+        <g id="Elements">
+          <path
+            ref={pathRef}
+            d="m45.8,53.13c1.43-1.52,3.27-3.05,4.58-4.95,2.73-3.95,5.25-8.06,7.74-12.18,4.73-7.81,9.39-15.67,14.48-24.17-6.61,2.17-11.52,7.78-19.29,6.47.69-1.22.89-2.19,1.4-2.4,7.82-3.19,14.57-8.05,21.04-13.35,5.27-4.31,8.05-3.14,8.69,3.37.67,6.84,2.11,13.59,3.12,20.4.16,1.11-.18,2.29-.31,3.66q-4.32-2.01-7.88-16.92c-.84,1.35-1.5,2.33-2.09,3.34-5.92,10.28-11.73,20.63-17.82,30.81-1.96,3.27-4.38,6.37-7.08,9.07-4.83,4.82-10.13,4.65-14.61-.54-2.26-2.62-3.98-5.81-5.47-8.97-1.7-3.61-2.76-7.52-4.3-11.22-1.08-2.62-2.48-5.12-3.79-7.76-3.08,1.19-4.35,3.49-5.73,5.57-5.89,8.87-10.34,18.44-13.62,28.57-.39,1.22-.63,2.55-1.31,3.59-.41.64-1.5,1.11-2.29,1.12-.43,0-1.23-1.09-1.25-1.71-.06-1.75-.04-3.56.38-5.25,2.84-11.47,7.47-22.17,14.18-31.91,1.35-1.96,3-3.81,4.82-5.32,3.3-2.73,6.65-2.6,9.3.74,2.15,2.72,3.8,5.93,5.22,9.12,2.08,4.68,3.65,9.58,5.66,14.3,1.12,2.63,2.51,5.24,6.22,6.52Z"
+            stroke="black"
+            fill="none"
+          />
+        </g>
+      </svg>
+    </div>
+  );
+}
