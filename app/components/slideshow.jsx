@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function EmblaCarousel() {
   const autoplay = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [autoplay.current]);
