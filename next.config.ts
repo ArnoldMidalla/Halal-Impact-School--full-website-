@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
       },
       // Add other remote patterns for different Facebook image sources if necessary
     ],
+    domains: ["platform-lookaside.fbsbx.com", "facebook.com"],
   },
   // images: {
   //   domains: [
