@@ -2,7 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 import {
   NavigationMenu,
@@ -14,238 +16,223 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-// const components: { title: string; href: string; description: string }[] = [
-//   {
-//     title: "Alert Dialog",
-//     href: "/docs/primitives/alert-dialog",
-//     description:
-//       "A modal dialog that interrupts the user with important content and expects a response.",
-//   },
-//   {
-//     title: "Hover Card",
-//     href: "/docs/primitives/hover-card",
-//     description:
-//       "For sighted users to preview content available behind a link.",
-//   },
-//   {
-//     title: "Progress",
-//     href: "/docs/primitives/progress",
-//     description:
-//       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-//   },
-//   {
-//     title: "Scroll-area",
-//     href: "/docs/primitives/scroll-area",
-//     description: "Visually or semantically separates content.",
-//   },
-//   {
-//     title: "Tabs",
-//     href: "/docs/primitives/tabs",
-//     description:
-//       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-//   },
-//   {
-//     title: "Tooltip",
-//     href: "/docs/primitives/tooltip",
-//     description:
-//       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-//   },
-// ]
+export default function Navbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
 
-export default function NavigationMenuDemo() {
   return (
-    <div className="flex justify-center items-center w-full h-16 z-6 sticky top-0 bg-white">
-      <NavigationMenu
-        viewport={false}
-        className="flex justify-center items-center  sticky top-0 mx-auto "
-      >
-        <NavigationMenuList>
-          {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mt-4 mb-2 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-tight">
-                      Beautifully designed components built with Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/" >Home</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/about-us">About Us</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/admissions">Admissions</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Academics</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/results">
-                      <div className="font-medium">Results</div>
-                      <div className="text-muted-foreground">
-                        Check student results
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Subjects</div>
-                      <div className="text-muted-foreground">
-                        Explore different subjects offered
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>News & Events</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Gallery</div>
-                      <div className="text-muted-foreground">
-                        Look through our photo gallery
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Events</div>
-                      <div className="text-muted-foreground">
-                        Browse Upcoming and Past Events
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Blog</div>
-                      <div className="text-muted-foreground">
-                        Explore our blog posts
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/contact-us">Contact Us</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Components</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Documentation</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Blocks</Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/logo.jpg"
+              alt="Halal Impact Schools"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <div className="hidden sm:block">
+              <span className="text-xl font-bold text-blue-900">
+                Halal Impact
+              </span>
+              <span className="text-sm text-gray-600 block -mt-1">Schools</span>
+            </div>
+          </Link>
 
-          {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleHelpIcon />
-                    Backlog
-                  </Link>
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/">Home</Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleIcon />
-                    To Do
-                  </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/about-us">About Us</Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleCheckIcon />
-                    Done
-                  </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Academics</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[300px] gap-3 p-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/academics"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            Academic Programs
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Explore our comprehensive curriculum from Creche to SS3
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/results"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            Results Portal
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Check student examination results
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>School Life</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[300px] gap-3 p-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/student-life"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            Student Life
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Extracurricular activities and student experiences
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/gallery"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            Gallery
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            View our school photo gallery
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/admissions">Admissions</Link>
                 </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/contact-us">Contact</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="lg:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden border-t bg-white py-4">
+            <nav className="flex flex-col space-y-2">
+              <Link
+                href="/"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about-us"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                href="/academics"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Academics
+              </Link>
+              <Link
+                href="/student-life"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Student Life
+              </Link>
+              <Link
+                href="/gallery"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Gallery
+              </Link>
+              <Link
+                href="/admissions"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Admissions
+              </Link>
+              <Link
+                href="/results"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Results
+              </Link>
+              <Link
+                href="/contact-us"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
   );
 }
 

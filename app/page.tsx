@@ -1,101 +1,441 @@
 "use client";
-//using client just for the circle stuff
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Slideshow from "./components/slideshow";
-
 import { motion } from "framer-motion";
-
-// import SVGAnimation from '@/app/components/svgAnimation1';
+import {
+  GraduationCap,
+  Users,
+  Award,
+  BookOpen,
+  Target,
+  Heart,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 
 export default function Home() {
+  const stats = [
+    { number: "1000+", label: "Happy Students", icon: Users },
+    { number: "50+", label: "Dedicated Teachers", icon: GraduationCap },
+    { number: "15+", label: "Years of Excellence", icon: Award },
+    { number: "98%", label: "Success Rate", icon: Target },
+  ];
+
+  const programs = [
+    {
+      title: "Early Years Foundation (Ages 2-5)",
+      description:
+        "Building strong foundations through play-based learning, social skills development, and early literacy and numeracy concepts. Includes Creche, Pre-Nursery, Nursery 1 & 2.",
+      icon: Heart,
+      color: "bg-pink-50 text-pink-700 border-pink-200",
+    },
+    {
+      title: "Primary Education (Ages 6-11)",
+      description:
+        "Comprehensive primary education focusing on core subjects, critical thinking, and moral values. Covers Basic 1-5 with preparation for secondary education.",
+      icon: BookOpen,
+      color: "bg-blue-50 text-blue-700 border-blue-200",
+    },
+    {
+      title: "Junior Secondary (Ages 12-15)",
+      description:
+        "Advanced learning with specialized subjects, leadership development, and preparation for senior secondary education. JSS1-3 programs.",
+      icon: GraduationCap,
+      color: "bg-green-50 text-green-700 border-green-200",
+    },
+    {
+      title: "Senior Secondary (Ages 16-18)",
+      description:
+        "Specialized education preparing students for higher education and career paths. SS1-3 with comprehensive subject offerings.",
+      icon: Award,
+      color: "bg-orange-50 text-orange-700 border-orange-200",
+    },
+  ];
+
+  const features = [
+    "Qualified Teaching Staff - Experienced educators passionate about student success",
+    "Modern Facilities - State-of-the-art classrooms and learning resources",
+    "Holistic Curriculum - Balanced academic and character development programs",
+    "Individual Attention - Small class sizes ensuring personalized learning",
+    "Safe Environment - Secure, nurturing atmosphere for optimal growth",
+    "Proven Track Record - Consistent academic excellence and student achievements",
+  ];
+
   return (
-    <>
-      <section className="flex h-screen -mt-16 justify-center items-center gap-12 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
-        {/* <SVGAnimation /> */}
-        {/* <motion.div
-          className="absolute top-10 left-20 w-20 h-20 bg-blue-500 rounded-full z-204"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+    <div className="">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden ">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+
+        {/* Floating Elements */}
+        <motion.div
+          className="absolute top-20 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-60"
+          animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-24 h-24 bg-pink-400 rounded-full z-4"
-          animate={{ x: [0, 20, 0], rotate: [0, 10, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        /> */}
-        <div className="flex flex-col gap-4">
-          <h1 className="text-5xl font-bold leading-12 tracking-tight gradient-text">
-            <p className="text-orange-400 text-sm font-semibold tracking-normal">
-              Unlock your potential
-            </p>
-            Crafting a
-              Better
-              <br />
-              Life
-            Through Skill
-            <br />
-            Development
-          </h1>
-          <h3 className="text-sm text-gray-700">
-            Explore our e-course platform and unlock your full potential through
-            <br />
-            skill development. Build a brighter future and transform your life
-            with
-            <br />
-            our engaging & transformative courses
-          </h3>
-          <div className="flex gap-4">
-            <Button className="bg-blue-800 hover:bg-blue-900 duration-200">
-              <Link href={`#`}>Explore our course</Link>
-            </Button>
-            <Button
-              variant="secondary"
-              className="hover:bg-gray-50 duration-200 "
+          className="absolute bottom-20 right-10 w-20 h-20 bg-green-200 rounded-full opacity-60"
+          animate={{ x: [0, 20, 0], y: [0, -10, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <motion.div
+              className="space-y-8"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <Link href={`#`}>Try free now</Link>
-            </Button>
+              <div className="space-y-4">
+                <motion.p
+                  className="text-blue-600 font-semibold text-sm uppercase tracking-wide"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  Knowledge, Discipline, and Character
+                </motion.p>
+                <motion.h1
+                  className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  Igniting Excellence,
+                  <span className="text-blue-600"> Inspiring</span>
+                  <br />
+                  <span className="text-orange-600">Futures</span>
+                </motion.h1>
+                <motion.p
+                  className="text-lg text-gray-600 max-w-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  At Halal Impact Schools, we provide a world-class educational experience that combines academic excellence with strong moral values. From Creche to SS3, we shape confident, disciplined, and well-rounded learners ready to make a positive impact in the world.
+                </motion.p>
+              </div>
+
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  <Link href="/contact-us" className="flex items-center gap-2">
+                    Book a School Tour
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-600 text-orange-600 hover:bg-orange-50"
+                >
+                  <Link href="/contact-us">Apply Now</Link>
+                </Button>
+              </motion.div>
+
+              {/* Features List */}
+              <motion.div
+                className="grid grid-cols-2 gap-3 pt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                {features.slice(0, 4).map((feature, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Image Section */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative w-full h-[500px] rounded-2xl  shadow-2xl">
+                <div className="rounded-lg overflow-hidden h-[500px]">
+                  <Slideshow />
+                </div>
+                {/* Floating Stats Cards */}
+                <motion.div
+                  className="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg border"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <Users className="w-5 h-5 text-blue-600" />
+                    <div>
+                      <p className="font-bold text-lg">1000+</p>
+                      <p className="text-xs text-gray-600">Students</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2,
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <Award className="w-5 h-5 text-green-600" />
+                    <div>
+                      <p className="font-bold text-lg">Top 10</p>
+                      <p className="text-xs text-gray-600">In Nigeria</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
-        <div className="size-110 rounded-xl overflow-clip">
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                  {stat.number}
+                </h3>
+                <p className="text-gray-600">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Programs Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <motion.div
-            className="p-2 absolute bg-white -translate-x-8 translate-y-6 rounded-md shadow-lg hover:shadow-xl flex flex-col hover:scale-105 -rotate-2 hover:-rotate-6 font-medium duration-300 z-5"
-            animate={{ x: [0, 20, 0], rotate: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >
-            <p className="bg-white p-2 text-sm">1000+ students admitted</p>
-          </motion.div>
-          <motion.div
-            className="p-2 absolute bg-white translate-x-70 translate-y-80 rounded-md shadow-lg hover:shadow-xl flex flex-col hover:scale-105 rotate-2 hover:rotate-6 font-medium duration-300 z-5"
-            animate={{ y: [0, 20, 0]}}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <p className="bg-white p-2 text-sm">Top 10 schools in nigeria</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Educational Programs
+            </h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive programs designed to nurture every aspect of your
+              child&apos;s development
+            </p>
           </motion.div>
 
-          {/* <img
-            src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/501399971_24076278151978535_7287700868075577350_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lvmwnu07ORAQ7kNvwGT8NXK&_nc_oc=AdnGwlZPWZJBgRlUR3K9HsyReaXF0a9MpOJPMhpPq_CFXoylFDrJqHnU2PagUzFnEPASbyh-qURNKV0XFzVISUH8&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=oCb4Q5sJUr9aloKPMUd_jA&oh=00_AfVwaKXZpIBJOiDQDbBjWXVTe0VDwAgVYM8z5TSeuP154A&oe=68BB34D1"
-            alt=""
-            className="object-cover w-full h-full"
-          /> */}
-          <Slideshow />
-        </div>
-      </section>
-      <section className="flex justify-center items-center pb-8 h-fit w-full bg-blue-50">
-        <div className="grid grid-cols-4 bg-blue-800 w-[80vw] h-40">
-          <div className="text-white">
-            <h2 className="font-bold ">Programs</h2>
-            <p className="text-sm">
-              Our programs are designed <br /> to develop your children
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {programs.map((program, index) => (
+              <motion.div
+                key={index}
+                className={`p-6 rounded-xl border-2 ${program.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="mb-4">
+                  <program.icon className="w-10 h-10" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{program.title}</h3>
+                <p className="text-sm opacity-80">{program.description}</p>
+              </motion.div>
+            ))}
           </div>
-          <div>gno3p4gn3op</div>
-          <div>gno3p4gn3op</div>
-          <div>gno3p4gn3op</div>
         </div>
       </section>
-    </>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Halal Impact Schools?
+            </h2>
+            <p className="text-lg text-gray-600">
+              Discover what makes us the preferred choice for quality education
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Academic Excellence",
+                description: "Our proven curriculum and teaching methods ensure students achieve their full potential in all subject areas.",
+                icon: "🎓"
+              },
+              {
+                title: "Character Development",
+                description: "We instill strong moral values, integrity, and leadership skills that shape responsible global citizens.",
+                icon: "⭐"
+              },
+              {
+                title: "Individual Growth",
+                description: "Every child receives personalized attention to discover and develop their unique talents and abilities.",
+                icon: "🌱"
+              },
+              {
+                title: "Modern Learning",
+                description: "State-of-the-art facilities and innovative teaching methods create an engaging learning environment.",
+                icon: "💡"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Parents Say About Us
+            </h2>
+            <p className="text-lg text-gray-600">
+              Hear from our satisfied parents and students
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                quote: "Halal Impact Schools has transformed my children into confident, disciplined, and academically excellent students. The caring teachers and strong moral foundation have made all the difference.",
+                author: "Mrs. Sarah Ahmed",
+                role: "Parent"
+              },
+              {
+                quote: "The school's commitment to both academic and character development is remarkable. My daughter has grown tremendously in confidence and leadership skills.",
+                author: "Mr. John Okafor",
+                role: "Parent"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg border"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="mb-6">
+                  <div className="text-4xl text-blue-600 mb-4">"</div>
+                  <p className="text-gray-700 italic text-lg leading-relaxed">
+                    {testimonial.quote}
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-blue-600 font-semibold text-lg">
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Join Our School Community?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Give your child the best education with our proven track record of
+              excellence
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
+                <Link href="/contact-us">Apply Now</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
+                <Link href="/results">Check Results</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
 
