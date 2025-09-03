@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Image
-                src="/logo.jpg"
+                src="/Halal-Impact-School-Logo.png"
                 alt="Halal Impact Schools"
                 width={50}
                 height={50}

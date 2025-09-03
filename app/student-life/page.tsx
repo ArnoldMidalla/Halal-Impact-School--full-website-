@@ -114,8 +114,8 @@ export default function StudentLife() {
       color: "bg-red-50 text-red-700 border-red-200",
     },
     {
-      name: "Islamic Society",
-      description: "Quranic studies, Islamic history, and spiritual development",
+      name: "Christian Society",
+      description: "Biblical studies, Christian history, and spiritual development",
       icon: BookOpen,
       color: "bg-purple-50 text-purple-700 border-purple-200",
     },

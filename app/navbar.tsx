@@ -26,7 +26,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.jpg"
+              src="/Halal-Impact-School-Logo.png"
               alt="Halal Impact Schools"
               width={40}
               height={40}
@@ -75,7 +75,8 @@ export default function Navbar() {
                             Academic Programs
                           </div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            Explore our comprehensive curriculum from Creche to SS3
+                            Explore our comprehensive curriculum from Creche to
+                            SS3
                           </p>
                         </Link>
                       </NavigationMenuLink>

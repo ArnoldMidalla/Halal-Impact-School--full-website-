@@ -168,7 +168,7 @@ On-site medical facility with qualified nurse to ensure student health and safet
 **Nursery 1 (Age 3-4)**
 - Pre-literacy and pre-numeracy skills
 - Creative arts and crafts
-- Basic Islamic studies
+- Basic Christian Religious Studies
 - Physical development activities
 - Social interaction and sharing
 
@@ -186,7 +186,7 @@ On-site medical facility with qualified nurse to ensure student health and safet
 - Mathematics
 - General Science
 - Social Studies
-- Islamic Religious Studies
+- Christian Religious Studies
 - Computer Studies
 - Physical and Health Education
 - Creative Arts
@@ -207,7 +207,7 @@ On-site medical facility with qualified nurse to ensure student health and safet
 - Mathematics
 - Basic Science
 - Basic Technology
-- Islamic Religious Studies
+- Christian Religious Studies
 - Arabic Language
 - French Language
 - Physical and Health Education
@@ -227,8 +227,8 @@ On-site medical facility with qualified nurse to ensure student health and safet
 #### Nigerian Educational Curriculum
 We follow the approved Nigerian National Curriculum while incorporating innovative teaching methods and international best practices.
 
-#### Islamic Integration
-Islamic values and teachings are seamlessly integrated into all aspects of learning, creating morally conscious students.
+#### Christian Integration
+Christian values and teachings are seamlessly integrated into all aspects of learning, creating morally conscious students.
 
 #### 21st Century Skills
 Focus on critical thinking, creativity, collaboration, and communication skills essential for future success.
@@ -285,7 +285,7 @@ Early career orientation to help students understand various career paths and ma
 - **Environmental Club** - Gardening, recycling, and environmental awareness
 - **Young Entrepreneurs** - Business skills and entrepreneurship development
 - **Community Service** - Outreach programs and social responsibility
-- **Islamic Society** - Quranic studies, Islamic history, and spiritual development
+- **Christian Society** - Biblical studies, Christian history, and spiritual development
 
 ### House System
 Students are divided into four houses, each with distinct colors and values:

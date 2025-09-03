@@ -100,7 +100,12 @@ export default function About() {
               About <span className="text-blue-600">Halal Impact</span> Schools
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              Halal Impact Schools stands as a beacon of educational excellence in Kaduna, Nigeria. For over 15 years, we have been committed to providing quality education that combines academic rigor with strong moral values. Our institution serves students from Creche through Senior Secondary School (SS3), creating a nurturing environment where young minds flourish and future leaders emerge.
+              Halal Impact Schools stands as a beacon of educational excellence
+              in Kaduna, Nigeria. For over 15 years, we have been committed to
+              providing quality education that combines academic rigor with
+              strong moral values. Our institution serves students from Creche
+              through Senior Secondary School (SS3), creating a nurturing
+              environment where young minds flourish and future leaders emerge.
             </p>
           </motion.div>
         </div>
@@ -130,7 +135,10 @@ export default function About() {
                 </div>
               </div>
               <p className="text-green-800 text-lg leading-relaxed">
-                To be the leading educational institution in Northern Nigeria that nurtures every child to discover their unique potential and thrive in today's dynamic world, while maintaining the highest standards of academic excellence and moral integrity.
+                To be the leading educational institution in Northern Nigeria
+                that nurtures every child to discover their unique potential and
+                thrive in today's dynamic world, while maintaining the highest
+                standards of academic excellence and moral integrity.
               </p>
             </motion.div>
 
@@ -154,7 +162,11 @@ export default function About() {
                 </div>
               </div>
               <p className="text-blue-800 text-lg leading-relaxed">
-                To provide holistic education that seamlessly integrates academic excellence with character development, preparing students to become confident, disciplined, and responsible global citizens who contribute positively to their communities and the world at large.
+                To provide holistic education that seamlessly integrates
+                academic excellence with character development, preparing
+                students to become confident, disciplined, and responsible
+                global citizens who contribute positively to their communities
+                and the world at large.
               </p>
             </motion.div>
           </div>
@@ -266,7 +278,7 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="relative h-96 lg:h-full">
                 <Image
-                  src="/placeholder.jpg"
+                  src="/Halal-Impact-School-Logo.png"
                   alt="Rev. Dorcas Kaida Midalla"
                   fill
                   className="object-cover"
@@ -281,20 +293,43 @@ export default function About() {
                 </p>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Rev. Dorcas Kaida Midalla is an accomplished educator, visionary leader, and devoted mother who founded Halal Impact Schools with a passion for transforming young lives through quality education. With over two decades of experience in education and child development, she brings a wealth of knowledge and unwavering commitment to academic excellence and character formation.
+                    Rev. Dorcas Kaida Midalla is an accomplished educator,
+                    visionary leader, and devoted mother who founded Halal
+                    Impact Schools with a passion for transforming young lives
+                    through quality education. With over two decades of
+                    experience in education and child development, she brings a
+                    wealth of knowledge and unwavering commitment to academic
+                    excellence and character formation.
                   </p>
                   <p>
-                    As the wife of Bishop Linus Kaida Midalla, Senior Pastor of Dominion Life Impact Church Worldwide, Rev. Dorcas combines her educational expertise with strong spiritual values, creating an institution that nurtures both the mind and character of every student. Together, they are blessed with six children, giving her firsthand experience in child-rearing and education.
+                    As the wife of Bishop Linus Kaida Midalla, Senior Pastor of
+                    Dominion Life Impact Church Worldwide, Rev. Dorcas combines
+                    her educational expertise with strong spiritual values,
+                    creating an institution that nurtures both the mind and
+                    character of every student. Together, they are blessed with
+                    six children, giving her firsthand experience in
+                    child-rearing and education.
                   </p>
                   <p>
-                    Rev. Dorcas holds advanced degrees in Education and Child Psychology, and has been recognized for her contributions to educational development in Kaduna State. Under her leadership, Halal Impact Schools has grown from a small learning center to one of the most respected educational institutions in the region.
+                    Rev. Dorcas holds advanced degrees in Education and Child
+                    Psychology, and has been recognized for her contributions to
+                    educational development in Kaduna State. Under her
+                    leadership, Halal Impact Schools has grown from a small
+                    learning center to one of the most respected educational
+                    institutions in the region.
                   </p>
                 </div>
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
                   <p className="text-blue-800 italic font-medium">
-                    "Every child is a gift with unlimited potential. Our role is to provide the nurturing environment, quality education, and moral guidance needed to help them discover and develop their unique talents while building strong character that will serve them throughout their lives."
+                    "Every child is a gift with unlimited potential. Our role is
+                    to provide the nurturing environment, quality education, and
+                    moral guidance needed to help them discover and develop
+                    their unique talents while building strong character that
+                    will serve them throughout their lives."
                   </p>
-                  <p className="text-blue-600 text-sm mt-2">- Rev. Dorcas Kaida Midalla</p>
+                  <p className="text-blue-600 text-sm mt-2">
+                    - Rev. Dorcas Kaida Midalla
+                  </p>
                 </div>
               </div>
             </div>
