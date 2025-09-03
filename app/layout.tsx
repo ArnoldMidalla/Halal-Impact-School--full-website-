@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Creche to SS3",
     "academic excellence",
     "character development",
-    "Tsaunin Kura school",
+    "Schools in Kaduna",
   ],
   authors: [{ name: "Halal Impact Schools" }],
   creator: "Halal Impact Schools",
