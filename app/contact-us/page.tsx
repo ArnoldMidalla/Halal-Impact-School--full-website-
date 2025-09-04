@@ -34,7 +34,7 @@ export default function ContactPage() {
       details: [
         "Main Office: +234 803 704 0204",
         "Admissions: +234 809 123 4567",
-        "Emergency: +234 807 555 0123"
+        "Emergency: +234 807 555 0123",
       ],
       color: "text-green-600",
     },
@@ -44,7 +44,7 @@ export default function ContactPage() {
       details: [
         "info@halalimpactschools.edu.ng",
         "admissions@halalimpactschools.edu.ng",
-        "principal@halalimpactschools.edu.ng"
+        "principal@halalimpactschools.edu.ng",
       ],
       color: "text-purple-600",
     },
@@ -95,7 +95,10 @@ export default function ContactPage() {
               Get in <span className="text-blue-600">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              We'd love to hear from you! Whether you're a prospective parent, current family member, or community partner, we're here to answer your questions and provide information about our exceptional educational programs.
+              We'd love to hear from you! Whether you're a prospective parent,
+              current family member, or community partner, we're here to answer
+              your questions and provide information about our exceptional
+              educational programs.
             </p>
           </motion.div>
         </div>
@@ -140,9 +143,9 @@ export default function ContactPage() {
       {/* Main Contact Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className=" gap-12">
             {/* Contact Form */}
-            <motion.div
+            {/* <motion.div
               className="bg-white rounded-2xl shadow-xl p-8 lg:p-12"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -313,7 +316,7 @@ export default function ContactPage() {
                   <Send className="w-4 h-4 ml-2" />
                 </Button>
               </form>
-            </motion.div>
+            </motion.div> */}
 
             {/* Image and Quick Actions */}
             <motion.div
@@ -324,140 +327,65 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               {/* School Image */}
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
-                <Slideshow />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Visit Our Campus</h3>
-                  <p className="text-white/90">
-                    Experience our world-class facilities
-                  </p>
-                </div>
-              </div>
 
-              {/* Quick Actions */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Quick Actions
-                </h3>
-                {quickActions.map((action, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <action.icon className="w-6 h-6 text-blue-600" />
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="bg-white w-[50%]">
+                  <div className="max-w-7xl mx-auto px-4 lg:px-8">
+                    <motion.div
+                      className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.6777385417395!2d7.459295375037221!3d10.447126689682316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d4b6df2cbb9c3%3A0x70b6f7e1a4dcfea0!2sHalal%20Impact%20Schools!5e0!3m2!1sen!2sng!4v1756983422310!5m2!1sen!2sng"
+                        width="600"
+                        height="450"
+                        className="border-0"
+                        loading="lazy"
+                        // referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Quick Actions */}
+                <div className="space-y-4 w-[50%]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    Quick Actions
+                  </h3>
+                  {quickActions.map((action, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <action.icon className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-gray-900 mb-1">
+                            {action.title}
+                          </h4>
+                          <p className="text-gray-600 text-sm mb-3">
+                            {action.description}
+                          </p>
+                          <span className="text-blue-600 font-medium text-sm hover:underline">
+                            {action.action} →
+                          </span>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                          {action.title}
-                        </h4>
-                        <p className="text-gray-600 text-sm mb-3">
-                          {action.description}
-                        </p>
-                        <span className="text-blue-600 font-medium text-sm hover:underline">
-                          {action.action} →
-                        </span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Landmarks & Directions */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Directions & Landmarks
-            </h2>
-            <p className="text-lg text-gray-600">
-              Easy to find with these nearby landmarks
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                landmark: "Dominion Life Impact Church",
-                description: "Near our school location",
-                icon: "⛪",
-              },
-              {
-                landmark: "Tsaunin Kura Primary Health Center",
-                description: "Close to our campus",
-                icon: "🏥",
-              },
-              {
-                landmark: "Impact Shopping Complex",
-                description: "Opposite our school",
-                icon: "🏪",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.landmark}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Map Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Find Us
-            </h2>
-            <p className="text-lg text-gray-600">
-              Located in the heart of Kaduna, easily accessible from all parts
-              of the city
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-600 font-medium">
-                Interactive Map Coming Soon
-              </p>
-              <p className="text-gray-500 text-sm">
-                Impact Avenue, off Zitti Road, Tsaunin Kura, Kaduna
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }

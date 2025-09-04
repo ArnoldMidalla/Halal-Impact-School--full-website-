@@ -87,7 +87,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <motion.div
-              className="space-y-8"
+              className="space-y-8 order-2 md:order-1"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -118,7 +118,11 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  At Halal Impact Schools, we provide a world-class educational experience that combines academic excellence with strong moral values. From Creche to SS3, we shape confident, disciplined, and well-rounded learners ready to make a positive impact in the world.
+                  At Halal Impact Schools, we provide a world-class educational
+                  experience that combines academic excellence with strong moral
+                  values. From Creche to SS3, we shape confident, disciplined,
+                  and well-rounded learners ready to make a positive impact in
+                  the world.
                 </motion.p>
               </div>
 
@@ -164,7 +168,7 @@ export default function Home() {
 
             {/* Image Section */}
             <motion.div
-              className="relative"
+              className="relative order-1 md:order-2"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -304,24 +308,28 @@ export default function Home() {
             {[
               {
                 title: "Academic Excellence",
-                description: "Our proven curriculum and teaching methods ensure students achieve their full potential in all subject areas.",
-                icon: "🎓"
+                description:
+                  "Our proven curriculum and teaching methods ensure students achieve their full potential in all subject areas.",
+                icon: "🎓",
               },
               {
                 title: "Character Development",
-                description: "We instill strong moral values, integrity, and leadership skills that shape responsible global citizens.",
-                icon: "⭐"
+                description:
+                  "We instill strong moral values, integrity, and leadership skills that shape responsible global citizens.",
+                icon: "⭐",
               },
               {
                 title: "Individual Growth",
-                description: "Every child receives personalized attention to discover and develop their unique talents and abilities.",
-                icon: "🌱"
+                description:
+                  "Every child receives personalized attention to discover and develop their unique talents and abilities.",
+                icon: "🌱",
               },
               {
                 title: "Modern Learning",
-                description: "State-of-the-art facilities and innovative teaching methods create an engaging learning environment.",
-                icon: "💡"
-              }
+                description:
+                  "State-of-the-art facilities and innovative teaching methods create an engaging learning environment.",
+                icon: "💡",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -332,7 +340,9 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.description}</p>
               </motion.div>
             ))}
@@ -360,15 +370,17 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                quote: "Halal Impact Schools has transformed my children into confident, disciplined, and academically excellent students. The caring teachers and strong moral foundation have made all the difference.",
+                quote:
+                  "Halal Impact Schools has transformed my children into confident, disciplined, and academically excellent students. The caring teachers and strong moral foundation have made all the difference.",
                 author: "Mrs. Sarah Ahmed",
-                role: "Parent"
+                role: "Parent",
               },
               {
-                quote: "The school's commitment to both academic and character development is remarkable. My daughter has grown tremendously in confidence and leadership skills.",
+                quote:
+                  "The school's commitment to both academic and character development is remarkable. My daughter has grown tremendously in confidence and leadership skills.",
                 author: "Mr. John Okafor",
-                role: "Parent"
-              }
+                role: "Parent",
+              },
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -387,11 +399,16 @@ export default function Home() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-blue-600 font-semibold text-lg">
-                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                      {testimonial.author
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                    <p className="font-semibold text-gray-900">
+                      {testimonial.author}
+                    </p>
                     <p className="text-gray-600 text-sm">{testimonial.role}</p>
                   </div>
                 </div>

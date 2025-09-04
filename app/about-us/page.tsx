@@ -54,29 +54,7 @@ export default function About() {
     },
   ];
 
-  const staff = [
-    {
-      name: "Dr. Sarah Johnson",
-      position: "Principal",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
-      description: "20+ years in educational leadership",
-    },
-    {
-      name: "Prof. Michael Chen",
-      position: "Academic Director",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
-      description: "Expert in curriculum development",
-    },
-    {
-      name: "Ms. Aisha Rahman",
-      position: "Head of Student Affairs",
-      image:
-        "https://images.unsplash.com/photo-1543949806-2c9935e6aa78?q=80&w=400&auto=format&fit=crop",
-      description: "Dedicated to student welfare and development",
-    },
-  ];
+  
 
   const achievements = [
     { number: "15+", label: "Years of Excellence" },
@@ -275,16 +253,16 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2">
               <div className="relative h-96 lg:h-full">
                 <Image
-                  src="/Halal-Impact-School-Logo.png"
+                  src="/Pastor-Dorcas.jpg"
                   alt="Rev. Dorcas Kaida Midalla"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="p-8 lg:p-12">
+              <div className="p-8">
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">
                   Rev. Dorcas Kaida Midalla
                 </h3>
@@ -319,74 +297,14 @@ export default function About() {
                     institutions in the region.
                   </p>
                 </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-                  <p className="text-blue-800 italic font-medium">
-                    "Every child is a gift with unlimited potential. Our role is
-                    to provide the nurturing environment, quality education, and
-                    moral guidance needed to help them discover and develop
-                    their unique talents while building strong character that
-                    will serve them throughout their lives."
-                  </p>
-                  <p className="text-blue-600 text-sm mt-2">
-                    - Rev. Dorcas Kaida Midalla
-                  </p>
-                </div>
+                
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Leadership Team
-            </h2>
-            <p className="text-lg text-gray-600">
-              Dedicated professionals committed to educational excellence
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {staff.map((member, index) => (
-              <motion.div
-                key={index}
-                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-600 font-medium mb-2">
-                    {member.position}
-                  </p>
-                  <p className="text-gray-600 text-sm">{member.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
